@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4302775E25E5A37A00907E1B /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4302775C25E5A37A00907E1B /* game.cpp */; };
+		4302776125E5A38800907E1B /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4302775F25E5A38800907E1B /* player.cpp */; };
 		43577CE125DC4ED200498D12 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43577CE025DC4ED200498D12 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4302775C25E5A37A00907E1B /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		4302775D25E5A37A00907E1B /* game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
+		4302775F25E5A38800907E1B /* player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
+		4302776025E5A38800907E1B /* player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = player.hpp; sourceTree = "<group>"; };
 		43577CDD25DC4ED200498D12 /* Chess */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Chess; sourceTree = BUILT_PRODUCTS_DIR; };
 		43577CE025DC4ED200498D12 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				43577CE025DC4ED200498D12 /* main.cpp */,
+				4302775F25E5A38800907E1B /* player.cpp */,
+				4302776025E5A38800907E1B /* player.hpp */,
+				4302775C25E5A37A00907E1B /* game.cpp */,
+				4302775D25E5A37A00907E1B /* game.hpp */,
 			);
 			path = Chess;
 			sourceTree = "<group>";
@@ -119,7 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4302775E25E5A37A00907E1B /* game.cpp in Sources */,
 				43577CE125DC4ED200498D12 /* main.cpp in Sources */,
+				4302776125E5A38800907E1B /* player.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

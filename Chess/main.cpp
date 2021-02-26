@@ -7,9 +7,13 @@
 //
 
 #include <iostream>
+#include "game.hpp"
+#include "player.hpp"
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    game p;
+    p.board_setup();
+    
     return 0;
 }
