@@ -88,24 +88,23 @@ void game::board_setup() {
                 board[i][j].piece = ' ';
                 board[i][j].type = empty;
             } // If statement end
-            cout << " | ";
-
         }
-        for (int i = 0; i < 8; i++) {
-            cout << "-";
-        }
-        cout << endl;
     }
    
     for (int i = 0; i < 8; i++) {
-        cout << h_border[i] << " ";
+        cout << h_border[i] << "   ";
     }
     cout << endl;
     
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
-            cout << board[i][j].piece << " ";
+            cout << board[i][j].piece << " | ";
+            
         }
         cout << v_border[i] << endl;
+        for (int i = 0; i < 8; i++) {
+            cout << "----";
+        }
+        cout << endl;
     }
 }
