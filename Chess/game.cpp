@@ -11,7 +11,7 @@ using namespace std;
 
     
 void game::board_setup() {
-    board.resize(8, vector<char>(8));
+    board.resize(8, vector<pieces>(8));
     h_border.resize(8);
     v_border.resize(8);
     
@@ -24,37 +24,77 @@ void game::board_setup() {
                 v_border[j] = vPos;
                 hPos++;
                 vPos--;
-            }
+            } //if statement end
             if (i == 0 || i == 7) {
+                // Switch statement to sort the order of the pieces on the board and assigns which pieces
+                // belong to which player.
                 switch (j) {
                     case 0:
                     case 7:
-                        board[i][j] = rook;
+                        board[i][j].piece = 'r';
+                        if (i == 0) {
+                            board[i][j].type = p1;
+                        } else {
+                            board[i][j].type = p2;
+                        }
                         break;
                     case 1:
                     case 6:
-                        board[i][j] = knight;
+                        board[i][j].piece = 'n';
+                        if (i == 0) {
+                            board[i][j].type = p1;
+                        } else {
+                            board[i][j].type = p2;
+                        }
                         break;
                     case 2:
                     case 5:
-                        board[i][j] = bishop;
+                        board[i][j].piece = 'b';
+                        if (i == 0) {
+                            board[i][j].type = p1;
+                        } else {
+                            board[i][j].type = p2;
+                        }
                         break;
                     case 3:
-                        board[i][j] = queen;
+                        board[i][j].piece = 'q';
+                        if (i == 0) {
+                            board[i][j].type = p1;
+                        } else {
+                            board[i][j].type = p2;
+                        }
                         break;
                     case 4:
-                        board[i][j] = king;
+                        board[i][j].piece = 'k';
+                        if (i == 0) {
+                            board[i][j].type = p1;
+                        } else {
+                            board[i][j].type = p2;
+                        }
                         break;
                     default:
                         cout << "This should never print/n";
                         break;
-                }
+                }// Switch statement end
             } else if (i == 1 || i == 6) {
-                board[i][j] = pawn;
+                board[i][j].piece = 'p';
+                if (i == 1) {
+                    board[i][j].type = p1;
+                } else {
+                    board[i][j].type = p2;
+                }
+                
             } else {
-                board[i][j] = ' ';
-            }
+                board[i][j].piece = ' ';
+                board[i][j].type = empty;
+            } // If statement end
+            cout << " | ";
+
         }
+        for (int i = 0; i < 8; i++) {
+            cout << "-";
+        }
+        cout << endl;
     }
    
     for (int i = 0; i < 8; i++) {
@@ -64,7 +104,7 @@ void game::board_setup() {
     
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
-            cout << board[i][j] << " ";
+            cout << board[i][j].piece << " ";
         }
         cout << v_border[i] << endl;
     }

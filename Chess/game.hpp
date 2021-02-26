@@ -13,25 +13,20 @@
 #include <vector>
 #include <iostream>
 
+enum space {p1, p2, empty};
+
 struct pieces {
     char piece;
-    bool p1;
-    
+    space type;
 };
 
 class game {
 public:
     void board_setup();
 private:
-    std::vector<std::vector<char>> board;
+    std::vector<std::vector<pieces>> board;
     std::vector<char> h_border;
     std::vector<int> v_border;
-    char pawn = 'p';
-    char bishop = 'b';
-    char rook = 'r';
-    char knight = 'n';
-    char king = 'k';
-    char queen = 'q';
 };
 
 #endif /* game_hpp */
