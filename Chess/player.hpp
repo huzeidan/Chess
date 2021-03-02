@@ -10,5 +10,16 @@
 #define player_hpp
 
 #include <stdio.h>
+#include <string>
+
+class Player {
+public:
+    Player(std::string n) : name(n) {};
+    void move();
+    
+private:
+    std::string name;
+    
+};
 
 #endif /* player_hpp */

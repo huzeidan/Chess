@@ -26,6 +26,7 @@ void game::board_setup() {
                 vPos--;
             } //if statement end
             if (i == 0 || i == 7) {
+                board[i][j].first_move = true;
                 // Switch statement to sort the order of the pieces on the board and assigns which pieces
                 // belong to which player.
                 switch (j) {
@@ -77,19 +78,24 @@ void game::board_setup() {
                         break;
                 }// Switch statement end
             } else if (i == 1 || i == 6) {
+                //Assigns all pawns for each player
                 board[i][j].piece = 'p';
+                board[i][j].first_move = true;
+
                 if (i == 1) {
                     board[i][j].type = p1;
                 } else {
                     board[i][j].type = p2;
-                }
+                }// if statement end
                 
             } else {
+                //Assigns every empty space
                 board[i][j].piece = ' ';
                 board[i][j].type = empty;
+                board[i][j].first_move = false;
             } // If statement end
-        }
-    }
+        }// for loop end
+    }// for loop end
    
     for (int i = 0; i < 8; i++) {
         cout << h_border[i] << "   ";
@@ -107,4 +113,8 @@ void game::board_setup() {
         }
         cout << endl;
     }
+}
+
+void game::player_move(int pos1_a, int pos1_b, int pos2_a, int pos2_b) {
+    
 }
